@@ -114,68 +114,68 @@
 // var tay = new Student(); //TypeError: Student is not a constructor
 // var birthYear = 1998;
 
-const student = {
-    name: 'Thai',
-    birthYear: 2000,
+// const student = {
+//     name: 'Thai',
+//     birthYear: 2000,
 
-    calcAgeNormal: function() {
-        // console.log(this)
-        // console.log(2021 - this.birthYear)
-        // const _this = this;
+//     calcAgeNormal: function() {
+// console.log(this)
+// console.log(2021 - this.birthYear)
+// const _this = this;
 
-        // const checkAgeNormal = function() {
-        //     console.log('check age Normal', this.birthYear)
-        //     if ((2021 - this.birthYear) >= 18) {
-        //         // console.log(this.birthYear)
-        //         console.log('You are old enough');
-        //     } else {
-        //         console.log('You are not old enough');
-        //     }
-        // }.bind(this);
+// const checkAgeNormal = function() {
+//     console.log('check age Normal', this.birthYear)
+//     if ((2021 - this.birthYear) >= 18) {
+//         // console.log(this.birthYear)
+//         console.log('You are old enough');
+//     } else {
+//         console.log('You are not old enough');
+//     }
+// }.bind(this);
 
-        const checkAgeNormal = () => {
-            console.log('check age Normal', this.birthYear)
-            if ((2021 - this.birthYear) >= 18) {
-                // console.log(this.birthYear)
-                console.log('You are old enough');
-            } else {
-                console.log('You are not old enough');
-            }
-        };
-        checkAgeNormal();
-    },
+// const checkAgeNormal = () => {
+//     console.log('check age Normal', this.birthYear)
+//     if ((2021 - this.birthYear) >= 18) {
+//         // console.log(this.birthYear)
+//         console.log('You are old enough');
+//     } else {
+//         console.log('You are not old enough');
+//     }
+// };
+// checkAgeNormal();
+// },
 
-    //Không dùng arrow func làm phương thức của obj
-    calcAgeArrow: () => {
-        console.log(this)
-        console.log(2021 - this.birthYear)
-    }
-}
+//Không dùng arrow func làm phương thức của obj
+//     calcAgeArrow: () => {
+//         console.log(this)
+//         console.log(2021 - this.birthYear)
+//     }
+// }
 
-student.calcAgeNormal();
+// student.calcAgeNormal();
 // student.calcAgeArrow();
 
 /**
  * Default Paramater
  */
-const winthoutDefaultParam = (typeOfUser) => {
-    if (typeOfUser === 'user') {
-        console.log('Redirect to user page')
-    } else {
-        console.log('Redirect to admin page')
-    }
-};
+// const winthoutDefaultParam = (typeOfUser) => {
+//     if (typeOfUser === 'user') {
+//         console.log('Redirect to user page')
+//     } else {
+//         console.log('Redirect to admin page')
+//     }
+// };
 // winthoutDefaultParam('admin');
 
-const withDefaultParam = (typeOfUser = 'user') => {
-    if (typeOfUser === 'user') {
-        console.log('Redirect to user page')
-    } else {
-        console.log('Redirect to admin page')
-    }
-};
-withDefaultParam();
-withDefaultParam('admin');
+// const withDefaultParam = (typeOfUser = 'user') => {
+//     if (typeOfUser === 'user') {
+//         console.log('Redirect to user page')
+//     } else {
+//         console.log('Redirect to admin page')
+//     }
+// };
+// withDefaultParam();
+// withDefaultParam('admin');
 
 
 /**
@@ -185,3 +185,57 @@ withDefaultParam('admin');
  */
 
 //With Array
+//Without Destructuring
+// const students = ['Tay', 'Hoang', 'Huy'];
+// const tay = students[0];
+// const huy = students[2];
+// console.log(tay, huy);
+
+//Without Destructuring
+// const students = ['Tay', 'Hoang', 'Huy'];
+// const [a, , c] = students;
+// console.log(a, c);
+
+//With Object
+//Without Array
+// const student = {
+//     name: 'Thai',
+//     age: 20,
+//     class: 'BC12'
+// }
+// const fullName = student.name;
+// const age = student.age;
+// console.log(fullName, age);
+
+//Without Destructuring
+// const student = {
+//     fullName: 'Thai',
+//     age: 20,
+//     class: 'BC12'
+// }
+// const { fullName, class: className } = student;
+// console.log(fullName, className);
+
+/**
+ * Template String
+ */
+
+// const fullName = 'Quang Thai';
+// const str = 'My name is' + fullName;
+// const templateStr = `My name is ${fullName}`;
+
+
+/**
+ * Enhanced Object Literals (Shorthand syntax)
+ */
+const age = 18;
+
+var person = {
+    fullName: ';Vo Quang Thái',
+    age, //age: age
+    calcAgen() {
+        return 2021 - this.age;
+    },
+
+}
+console.log(person.calcAgen())
