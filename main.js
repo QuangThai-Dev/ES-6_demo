@@ -185,7 +185,7 @@
  */
 
 //With Array
-//Without Destructuring
+//Without array
 // const students = ['Tay', 'Hoang', 'Huy'];
 // const tay = students[0];
 // const huy = students[2];
